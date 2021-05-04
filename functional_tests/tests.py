@@ -76,7 +76,7 @@ class NewVisitorTest(LiveServerTestCase):
         self.wait_for_row_in_list_table("1: Buy milk")
 
         francis_list_url = self.browser.current_url
-        self.assertREgex(edith_lists_url, '/lists/.+')
+        self.assertRegex(edith_lists_url, '/lists/.+')
         self.assertNotEqual(francis_list_url, edith_lists_url)
 
         page_text = self.browser.find_element_by_tag_name('body').text
